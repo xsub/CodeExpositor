@@ -1,7 +1,7 @@
 # FFmpeg Example Data
 
-This directory contains small, checked-in samples from an FFmpeg validation run.
-It intentionally does not vendor FFmpeg source code or large generated artifacts.
+This directory contains checked-in samples from an FFmpeg validation run.
+It intentionally does not vendor FFmpeg source code.
 
 The real FFmpeg checkout should live outside tracked source files, for example:
 
@@ -14,12 +14,13 @@ The real FFmpeg checkout should live outside tracked source files, for example:
 - `doctor.sample.txt` - text output from `expositor doctor` after FFmpeg readiness and selected build-context readiness pass.
 - `build-context.sample.json` - a captured compile command for `libavcodec/mpeg4videodec.c`.
 - `mpeg4-case-study.sample.json` - a condensed MPEG-4 case-study result with the top implementation candidates.
+- `report.html` - full generated static HTML report from the semantic FFmpeg graph.
 - `report.sample.html` - a small renderable HTML summary of the FFmpeg MPEG-4 run.
 
 To regenerate the full local artifacts:
 
 ```bash
-cd /Users/pawel/_DEV/CodeExpositor
+cd /path/to/CodeExpositor
 
 python3 -m expositor.cli doctor . --ffmpeg-root .external/ffmpeg
 
@@ -46,7 +47,7 @@ python3 -m expositor.cli case-study mpeg4 .external/ffmpeg \
 python3 -m expositor.cli report .external/ffmpeg \
   --db /private/tmp/ffmpeg-semantic-expositor.sqlite \
   --html \
-  --output /private/tmp/ffmpeg-semantic-report.html
+  --output examples/ffmpeg/report.html
 ```
 
 The checked-in samples are meant for documentation, review and quick orientation.
