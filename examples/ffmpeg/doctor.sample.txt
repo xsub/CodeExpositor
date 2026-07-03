@@ -1,0 +1,39 @@
+Code Expositor doctor
+- ok: True
+- pass: 12
+- warn: 3
+
+Checks
+- [pass] repository_layout: Required project files are present.
+- [pass] canonical_schema: Canonical graph schema is executable.
+- [pass] tiny_corpus: Tiny C and C++ corpora are present.
+- [pass] tiny_graph_validation: Tiny C canonical graph passes validation.
+- [pass] tiny_mpeg4_case_study: Tiny MPEG-4 case study finds an implementation candidate and a static path.
+  - path count: 1
+  - implementation: decode_mpeg4_packet [definition] src/decoder.c:11
+  - implementation: decode_mpeg4_packet [declaration] include/codec.h:11
+- [pass] tiny_exports_report: Tiny graph exports and HTML report render from the canonical graph.
+  - diagrams: svg=3, html_svg=4
+- [pass] tiny_storage_store: Tiny canonical graph persists to SQLite with matching adjacency.
+  - storage: nodes=38, edges=59, adjacency_out=59, adjacency_in=59
+- [pass] clang: Clang is available for semantic spikes.
+- [pass] tiny_cpp_semantic: Tiny C++ semantic spike extracts method calls.
+- [warn] tree_sitter: tree-sitter runtime unavailable; outline auto falls back to regex.
+- [warn] universal_ctags: Universal Ctags unavailable; symbols auto falls back to outline.
+- [warn] graphviz: Graphviz dot unavailable; SVG auto falls back to internal renderer.
+- [pass] ffmpeg_checkout: FFmpeg checkout is present.
+- [pass] ffmpeg_mpeg4_readiness: FFmpeg checkout has MPEG-4 candidates for graph validation.
+  - path: /Users/pawel/_DEV/CodeExpositor/.external/ffmpeg
+  - MPEG-4 candidates: 33
+  - candidate: libavcodec/bsf/mpeg4_unpack_bframes.c
+  - candidate: libavcodec/mpeg4audio.c
+  - candidate: libavcodec/mpeg4audio.h
+  - candidate: libavcodec/mpeg4audio_copy_pce.h
+  - candidate: libavcodec/mpeg4audio_sample_rates.c
+- [pass] ffmpeg_build_context: FFmpeg build context is ready for selected Clang semantic validation.
+  - compile commands: compile_commands.json
+  - translation units: 1
+  - libavcodec translation units: 1
+  - MPEG-4 translation units: 1
+  - MPEG-4 TU: libavcodec/mpeg4videodec.c
+  - sample TU: libavcodec/mpeg4videodec.c

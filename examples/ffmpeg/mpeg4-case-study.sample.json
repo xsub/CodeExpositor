@@ -1,0 +1,107 @@
+{
+  "question": "Where is MPEG-4 decoding implemented?",
+  "source": {
+    "project": "FFmpeg",
+    "checkout": ".external/ffmpeg",
+    "commit": "1836ef9",
+    "graph": "semantic selected translation unit",
+    "translation_unit": "libavcodec/mpeg4videodec.c"
+  },
+  "summary": {
+    "matching_symbols": 273,
+    "matching_files": 117,
+    "public_api_candidates": 41
+  },
+  "implementation_candidates": [
+    {
+      "symbol": "ff_mpeg4_decode_studio",
+      "type": "Function",
+      "path": "libavcodec/mpeg4videodec.c",
+      "line": 260,
+      "role": "definition",
+      "rank_score": 43,
+      "match_basis": [
+        "symbol-name",
+        "symbol-path",
+        "decode-name",
+        "decode-path",
+        "mpeg4-video-decoder-path",
+        "libavcodec-path",
+        "callable-symbol"
+      ]
+    },
+    {
+      "symbol": "mpeg4_decode_sprite_trajectory",
+      "type": "Function",
+      "path": "libavcodec/mpeg4videodec.c",
+      "line": 437,
+      "role": "definition",
+      "rank_score": 43,
+      "match_basis": [
+        "symbol-name",
+        "symbol-path",
+        "decode-name",
+        "decode-path",
+        "mpeg4-video-decoder-path",
+        "libavcodec-path",
+        "callable-symbol"
+      ]
+    },
+    {
+      "symbol": "ff_mpeg4_decode_video_packet_header",
+      "type": "Function",
+      "path": "libavcodec/mpeg4videodec.c",
+      "line": 708,
+      "role": "definition",
+      "rank_score": 43,
+      "match_basis": [
+        "symbol-name",
+        "symbol-path",
+        "decode-name",
+        "decode-path",
+        "mpeg4-video-decoder-path",
+        "libavcodec-path",
+        "callable-symbol"
+      ]
+    },
+    {
+      "symbol": "ff_mpeg4_decode_studio_slice_header",
+      "type": "Function",
+      "path": "libavcodec/mpeg4videodec.c",
+      "line": 808,
+      "role": "definition",
+      "rank_score": 43,
+      "match_basis": [
+        "symbol-name",
+        "symbol-path",
+        "decode-name",
+        "decode-path",
+        "mpeg4-video-decoder-path",
+        "libavcodec-path",
+        "callable-symbol"
+      ]
+    },
+    {
+      "symbol": "mpeg4_decode_dc",
+      "type": "Function",
+      "path": "libavcodec/mpeg4videodec.c",
+      "line": 983,
+      "role": "definition",
+      "rank_score": 43,
+      "match_basis": [
+        "symbol-name",
+        "symbol-path",
+        "decode-name",
+        "decode-path",
+        "mpeg4-video-decoder-path",
+        "libavcodec-path",
+        "callable-symbol"
+      ]
+    }
+  ],
+  "limitations": [
+    "This sample is condensed for repository documentation.",
+    "Use /private/tmp/ffmpeg-semantic-mpeg4-case-study.json or regenerate the command from examples/ffmpeg/README.md for the full local result.",
+    "Static analysis evidence does not prove runtime execution."
+  ]
+}

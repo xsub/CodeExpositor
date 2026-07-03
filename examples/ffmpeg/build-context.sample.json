@@ -1,0 +1,45 @@
+{
+  "compile_commands_path": "compile_commands.json",
+  "translation_units": [
+    {
+      "arguments": [
+        "clang",
+        "-I.",
+        "-I./",
+        "-D_ISOC11_SOURCE",
+        "-D_FILE_OFFSET_BITS=64",
+        "-D_LARGEFILE_SOURCE",
+        "-I./compat/dispatch_semaphore",
+        "-DPIC",
+        "-I./compat/stdbit",
+        "-DHAVE_AV_CONFIG_H",
+        "-std=c17",
+        "-MMD",
+        "-MF",
+        "libavcodec/mpeg4videodec.d",
+        "-MT",
+        "libavcodec/mpeg4videodec.o",
+        "-c",
+        "-o",
+        "libavcodec/mpeg4videodec.o",
+        "libavcodec/mpeg4videodec.c"
+      ],
+      "directory": ".",
+      "file": "libavcodec/mpeg4videodec.c",
+      "include_paths": [
+        ".",
+        "./",
+        "./compat/dispatch_semaphore",
+        "./compat/stdbit"
+      ],
+      "macros": [
+        "HAVE_AV_CONFIG_H",
+        "PIC",
+        "_FILE_OFFSET_BITS=64",
+        "_ISOC11_SOURCE",
+        "_LARGEFILE_SOURCE"
+      ],
+      "target_arch": null
+    }
+  ]
+}
