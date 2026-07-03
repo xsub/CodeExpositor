@@ -1,0 +1,226 @@
+{
+  "direct_callers": {
+    "decode_mpeg4_packet": [
+      {
+        "edge": {
+          "architecture_context": null,
+          "build_context": "src/decoder.c",
+          "confidence": "CONFIRMED",
+          "evidence": [
+            {
+              "column": null,
+              "line": 20,
+              "path": "src/decoder.c",
+              "snippet": "return decode_mpeg4_packet(decoder, data, size);"
+            }
+          ],
+          "extraction_tool": "callgraph-regex",
+          "id": "7660949b3d2d60aa2282bdbb",
+          "index_version": "0.1",
+          "metadata": {
+            "callee": "decode_mpeg4_packet",
+            "caller": "decode_frame",
+            "resolved": true
+          },
+          "source": "7d54018dfcbdc38f519f5557",
+          "target": "39e7354c8a2152e844cbfcbe",
+          "type": "CALLS"
+        },
+        "source": {
+          "id": "7d54018dfcbdc38f519f5557",
+          "label": "decode_frame",
+          "metadata": {
+            "declaration": false,
+            "definition": true,
+            "kind": "Function",
+            "line": 19,
+            "scope": null,
+            "signature": "int decode_frame(Decoder *decoder, const unsigned char *data, int size)"
+          },
+          "path": "src/decoder.c",
+          "type": "Function"
+        },
+        "target": {
+          "id": "39e7354c8a2152e844cbfcbe",
+          "label": "decode_mpeg4_packet",
+          "metadata": {
+            "declaration": false,
+            "definition": true,
+            "kind": "Function",
+            "line": 11,
+            "scope": null,
+            "signature": "int decode_mpeg4_packet(Decoder *decoder, const unsigned char *data, int size)"
+          },
+          "path": "src/decoder.c",
+          "type": "Function"
+        }
+      }
+    ]
+  },
+  "implementation_candidates": [
+    {
+      "line": 11,
+      "match_basis": [
+        "symbol-name",
+        "decode-name",
+        "decode-path",
+        "callable-symbol"
+      ],
+      "node": {
+        "id": "39e7354c8a2152e844cbfcbe",
+        "label": "decode_mpeg4_packet",
+        "metadata": {
+          "declaration": false,
+          "definition": true,
+          "kind": "Function",
+          "line": 11,
+          "scope": null,
+          "signature": "int decode_mpeg4_packet(Decoder *decoder, const unsigned char *data, int size)"
+        },
+        "path": "src/decoder.c",
+        "type": "Function"
+      },
+      "path": "src/decoder.c",
+      "rank_score": 31,
+      "role": "definition",
+      "symbol": "decode_mpeg4_packet",
+      "type": "Function"
+    },
+    {
+      "line": 11,
+      "match_basis": [
+        "symbol-name",
+        "decode-name",
+        "callable-symbol"
+      ],
+      "node": {
+        "id": "a73a3ec399613685a22db876",
+        "label": "decode_mpeg4_packet",
+        "metadata": {
+          "declaration": true,
+          "definition": false,
+          "kind": "Function",
+          "line": 11,
+          "scope": null,
+          "signature": "int decode_mpeg4_packet(Decoder *decoder, const unsigned char *data, int size)"
+        },
+        "path": "include/codec.h",
+        "type": "Function"
+      },
+      "path": "include/codec.h",
+      "rank_score": 18,
+      "role": "declaration",
+      "symbol": "decode_mpeg4_packet",
+      "type": "Function"
+    }
+  ],
+  "limitations": [
+    "This case study is graph-evidence based and does not prove runtime execution.",
+    "Indirect calls require later semantic and callback analysis to improve coverage."
+  ],
+  "matching_files": [
+    {
+      "evidence": [
+        "symbol:decode_mpeg4_packet"
+      ],
+      "file": "include/codec.h"
+    },
+    {
+      "evidence": [
+        "symbol:decode_mpeg4_packet"
+      ],
+      "file": "src/decoder.c"
+    }
+  ],
+  "matching_symbols": [
+    {
+      "id": "a73a3ec399613685a22db876",
+      "label": "decode_mpeg4_packet",
+      "metadata": {
+        "declaration": true,
+        "definition": false,
+        "kind": "Function",
+        "line": 11,
+        "scope": null,
+        "signature": "int decode_mpeg4_packet(Decoder *decoder, const unsigned char *data, int size)"
+      },
+      "path": "include/codec.h",
+      "type": "Function"
+    },
+    {
+      "id": "39e7354c8a2152e844cbfcbe",
+      "label": "decode_mpeg4_packet",
+      "metadata": {
+        "declaration": false,
+        "definition": true,
+        "kind": "Function",
+        "line": 11,
+        "scope": null,
+        "signature": "int decode_mpeg4_packet(Decoder *decoder, const unsigned char *data, int size)"
+      },
+      "path": "src/decoder.c",
+      "type": "Function"
+    }
+  ],
+  "possible_paths": {
+    "decode_mpeg4_packet": [
+      [
+        {
+          "id": "25f36875d6e8add49d980414",
+          "label": "main",
+          "metadata": {
+            "declaration": false,
+            "definition": true,
+            "kind": "Function",
+            "line": 3,
+            "scope": null,
+            "signature": "int main(void)"
+          },
+          "path": "src/main.c",
+          "type": "Function"
+        },
+        {
+          "id": "7d54018dfcbdc38f519f5557",
+          "label": "decode_frame",
+          "metadata": {
+            "declaration": false,
+            "definition": true,
+            "kind": "Function",
+            "line": 19,
+            "scope": null,
+            "signature": "int decode_frame(Decoder *decoder, const unsigned char *data, int size)"
+          },
+          "path": "src/decoder.c",
+          "type": "Function"
+        },
+        {
+          "id": "39e7354c8a2152e844cbfcbe",
+          "label": "decode_mpeg4_packet",
+          "metadata": {
+            "declaration": false,
+            "definition": true,
+            "kind": "Function",
+            "line": 11,
+            "scope": null,
+            "signature": "int decode_mpeg4_packet(Decoder *decoder, const unsigned char *data, int size)"
+          },
+          "path": "src/decoder.c",
+          "type": "Function"
+        }
+      ]
+    ]
+  },
+  "public_api_candidates": [
+    {
+      "id": "acee271210344cfda410d683",
+      "label": "decode_mpeg4_packet",
+      "metadata": {
+        "line": 11,
+        "signature": "int decode_mpeg4_packet(Decoder *decoder, const unsigned char *data, int size)"
+      },
+      "path": "include/codec.h",
+      "type": "PublicAPI"
+    }
+  ],
+  "question": "Where is MPEG-4 decoding implemented?"
+}

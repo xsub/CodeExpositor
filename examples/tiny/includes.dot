@@ -1,0 +1,27 @@
+digraph CodeExpositor {
+  rankdir=LR;
+  node [shape=box, fontsize=10];
+  "00f928f1117640c957c29280" [label="include\\nDirectory"];
+  "194f88c1c90d52d9624c2a18" [label="main.c\\nsrc/main.c"];
+  "1be38ffc05316a6e4ee9804f" [label="src\\nDirectory"];
+  "3b4b6bed578470761f485564" [label="arch/x86\\nDirectory"];
+  "3f4c89d42776fd96ec02fedf" [label="codec.h\\ninclude/codec.h"];
+  "71a9e33bc84087bb077685a0" [label="stddef.h\\n<stddef.h>"];
+  "92b69867f7b4e4a9b3c287dc" [label="src\\nModule"];
+  "9ecd1bf194ca248b10e2956a" [label="arch\\nModule"];
+  "b15b807cbc246b8af8de9b9f" [label="simd.c\\narch/x86/simd.c"];
+  "e8c62d980f07a4d06458560f" [label="unresolved.c\\nsrc/unresolved.c"];
+  "ef72884c27aa464032f3b517" [label="decoder.c\\nsrc/decoder.c"];
+  "ff6c7409ec88673ac6b5a030" [label="include\\nModule"];
+  "1be38ffc05316a6e4ee9804f" -> "00f928f1117640c957c29280" [label="DEPENDS_ON\\nLIKELY"];
+  "3b4b6bed578470761f485564" -> "00f928f1117640c957c29280" [label="DEPENDS_ON\\nLIKELY"];
+  "92b69867f7b4e4a9b3c287dc" -> "ff6c7409ec88673ac6b5a030" [label="DEPENDS_ON\\nLIKELY"];
+  "92b69867f7b4e4a9b3c287dc" -> "ff6c7409ec88673ac6b5a030" [label="DEPENDS_ON\\nLIKELY"];
+  "92b69867f7b4e4a9b3c287dc" -> "ff6c7409ec88673ac6b5a030" [label="DEPENDS_ON\\nLIKELY"];
+  "9ecd1bf194ca248b10e2956a" -> "ff6c7409ec88673ac6b5a030" [label="DEPENDS_ON\\nLIKELY"];
+  "194f88c1c90d52d9624c2a18" -> "3f4c89d42776fd96ec02fedf" [label="INCLUDES\\nCONFIRMED"];
+  "b15b807cbc246b8af8de9b9f" -> "3f4c89d42776fd96ec02fedf" [label="INCLUDES\\nCONFIRMED"];
+  "e8c62d980f07a4d06458560f" -> "3f4c89d42776fd96ec02fedf" [label="INCLUDES\\nCONFIRMED"];
+  "ef72884c27aa464032f3b517" -> "3f4c89d42776fd96ec02fedf" [label="INCLUDES\\nCONFIRMED"];
+  "ef72884c27aa464032f3b517" -> "71a9e33bc84087bb077685a0" [label="INCLUDES\\nPOSSIBLE"];
+}

@@ -99,7 +99,7 @@ From an uninstalled checkout, the same commands can be run as `python3 -m exposi
 
 For larger validation, keep an FFmpeg checkout outside tracked source files, for example `.external/ffmpeg`, and run the same CLI pipeline with `--db` so validation, reports, explanations and case studies all consume the same persisted canonical graph.
 
-Checked-in FFmpeg example outputs are available under [examples/ffmpeg](examples/ffmpeg/). They include a sample `doctor` report, a captured build context for `libavcodec/mpeg4videodec.c`, and a condensed MPEG-4 case-study JSON result.
+Checked-in example outputs are available under [examples/tiny](examples/tiny/) and [examples/ffmpeg](examples/ffmpeg/). Tiny examples include a full static HTML report, SVG and DOT output. FFmpeg examples include a sample `doctor` report, a captured build context for `libavcodec/mpeg4videodec.c`, a condensed MPEG-4 case-study JSON result and a small HTML summary.
 
 When FFmpeg has been configured, a selected translation unit can be captured from Make without external interception tools:
 

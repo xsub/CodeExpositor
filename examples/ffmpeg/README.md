@@ -14,6 +14,7 @@ The real FFmpeg checkout should live outside tracked source files, for example:
 - `doctor.sample.txt` - text output from `expositor doctor` after FFmpeg readiness and selected build-context readiness pass.
 - `build-context.sample.json` - a captured compile command for `libavcodec/mpeg4videodec.c`.
 - `mpeg4-case-study.sample.json` - a condensed MPEG-4 case-study result with the top implementation candidates.
+- `report.sample.html` - a small renderable HTML summary of the FFmpeg MPEG-4 run.
 
 To regenerate the full local artifacts:
 

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="756" height="336" viewBox="0 0 756 336">
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#555"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<line x1="128" y1="88" x2="128" y2="208" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="128" y="144" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">CALLS</text>
+<line x1="128" y1="88" x2="348" y2="208" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="238" y="144" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">CALLS</text>
+<line x1="128" y1="208" x2="348" y2="88" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="238" y="144" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">CALLS</text>
+<line x1="568" y1="88" x2="568" y2="208" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="568" y="144" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">UNRESOLVED</text>
+<rect x="56" y="64" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="128" y="84" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">main</text>
+<text x="128" y="100" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">Function</text>
+<rect x="276" y="64" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="348" y="84" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">decode_mpeg4_packet</text>
+<text x="348" y="100" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">Function</text>
+<rect x="496" y="64" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="568" y="84" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">probe_external_decoder</text>
+<text x="568" y="100" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">Function</text>
+<rect x="56" y="184" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="128" y="204" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">decode_frame</text>
+<text x="128" y="220" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">Function</text>
+<rect x="276" y="184" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="348" y="204" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">decoder_init</text>
+<text x="348" y="220" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">Function</text>
+<rect x="496" y="184" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="568" y="204" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">external_decoder_probe</text>
+<text x="568" y="220" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">Symbol</text>
+</svg>

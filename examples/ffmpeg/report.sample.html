@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Code Expositor FFmpeg MPEG-4 Sample</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 960px; margin: 40px auto; padding: 0 24px; line-height: 1.5; color: #1f2933; }
+    h1, h2 { line-height: 1.2; }
+    code { background: #f3f4f6; padding: 2px 4px; border-radius: 4px; }
+    table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+    th, td { border: 1px solid #d8dee4; padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background: #f6f8fa; }
+    .note { background: #f8fafc; border-left: 4px solid #64748b; padding: 12px 16px; }
+  </style>
+</head>
+<body>
+  <h1>FFmpeg MPEG-4 Sample Output</h1>
+  <p>This is a small checked-in sample derived from a Code Expositor run against FFmpeg commit <code>1836ef9</code>.</p>
+  <p class="note">This file is intentionally condensed. It is not the full 26 MB local report. Regenerate the full report with the commands in <code>examples/ffmpeg/README.md</code>.</p>
+
+  <h2>Run Summary</h2>
+  <table>
+    <tbody>
+      <tr><th>Checkout</th><td><code>.external/ffmpeg</code></td></tr>
+      <tr><th>Selected translation unit</th><td><code>libavcodec/mpeg4videodec.c</code></td></tr>
+      <tr><th>Semantic functions</th><td>3,534</td></tr>
+      <tr><th>Semantic calls</th><td>2,296</td></tr>
+      <tr><th>Case-study matching symbols</th><td>273</td></tr>
+      <tr><th>Case-study matching files</th><td>117</td></tr>
+      <tr><th>Public API candidates</th><td>41</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Top Implementation Candidates</h2>
+  <table>
+    <thead>
+      <tr><th>Symbol</th><th>Role</th><th>Evidence Location</th><th>Rank</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>ff_mpeg4_decode_studio</code></td><td>definition</td><td><code>libavcodec/mpeg4videodec.c:260</code></td><td>43</td></tr>
+      <tr><td><code>mpeg4_decode_sprite_trajectory</code></td><td>definition</td><td><code>libavcodec/mpeg4videodec.c:437</code></td><td>43</td></tr>
+      <tr><td><code>ff_mpeg4_decode_video_packet_header</code></td><td>definition</td><td><code>libavcodec/mpeg4videodec.c:708</code></td><td>43</td></tr>
+      <tr><td><code>ff_mpeg4_decode_studio_slice_header</code></td><td>definition</td><td><code>libavcodec/mpeg4videodec.c:808</code></td><td>43</td></tr>
+      <tr><td><code>mpeg4_decode_dc</code></td><td>definition</td><td><code>libavcodec/mpeg4videodec.c:983</code></td><td>43</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Related Sample Files</h2>
+  <ul>
+    <li><code>doctor.sample.txt</code></li>
+    <li><code>build-context.sample.json</code></li>
+    <li><code>mpeg4-case-study.sample.json</code></li>
+  </ul>
+</body>
+</html>

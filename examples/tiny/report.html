@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Code Expositor Report</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; color: #17202a; background: #f7f9fb; }
+    header { background: #102a43; color: white; padding: 28px 36px; }
+    main { max-width: 1180px; margin: 0 auto; padding: 28px; }
+    section { margin: 0 0 28px; background: white; border: 1px solid #d8e2ec; border-radius: 8px; padding: 20px; overflow: auto; }
+    h1, h2 { margin-top: 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { text-align: left; border-bottom: 1px solid #e6edf3; padding: 7px 9px; vertical-align: top; }
+    th { background: #f0f4f8; }
+    pre { background: #102a43; color: #f0f4f8; padding: 16px; overflow: auto; border-radius: 6px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .diagram { margin: 18px 0 24px; }
+    .diagram svg { max-width: 100%; height: auto; border: 1px solid #e6edf3; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Code Expositor Report</h1>
+    <div>tiny-c</div>
+  </header>
+  <main>
+    <section>
+      <h2>Repository Overview</h2>
+      <div class="grid">
+        <div><table><thead><tr><th>Node type</th><th>Count</th></tr></thead><tbody><tr><td>Architecture</td><td>2</td></tr><tr><td>CompilerFlag</td><td>1</td></tr><tr><td>Directory</td><td>4</td></tr><tr><td>FeatureFlag</td><td>1</td></tr><tr><td>File</td><td>2</td></tr><tr><td>Function</td><td>9</td></tr><tr><td>HeaderFile</td><td>2</td></tr><tr><td>Macro</td><td>2</td></tr><tr><td>Module</td><td>3</td></tr><tr><td>PublicAPI</td><td>3</td></tr><tr><td>Repository</td><td>1</td></tr><tr><td>SourceFile</td><td>4</td></tr><tr><td>Struct</td><td>1</td></tr><tr><td>Symbol</td><td>1</td></tr><tr><td>TranslationUnit</td><td>2</td></tr></tbody></table></div>
+        <div><table><thead><tr><th>Edge type</th><th>Count</th></tr></thead><tbody><tr><td>ARCH_SPECIFIC</td><td>2</td></tr><tr><td>CALLS</td><td>3</td></tr><tr><td>COMPILED_IN</td><td>8</td></tr><tr><td>CONTAINS</td><td>19</td></tr><tr><td>DECLARES</td><td>3</td></tr><tr><td>DEFINES</td><td>9</td></tr><tr><td>DEPENDS_ON</td><td>6</td></tr><tr><td>EXPORTED_BY</td><td>3</td></tr><tr><td>INCLUDES</td><td>5</td></tr><tr><td>UNRESOLVED</td><td>1</td></tr></tbody></table></div>
+      </div>
+    </section>
+    <section>
+      <h2>Module Map</h2>
+      <table><thead><tr><th>Top-level module</th></tr></thead><tbody><tr><td>arch</td></tr><tr><td>include</td></tr><tr><td>src</td></tr></tbody></table>
+    </section>
+    <section>
+      <h2>Dependency Graph</h2>
+      <div class="diagram">
+        <h3>Module Dependency Diagram</h3>
+        <svg xmlns="http://www.w3.org/2000/svg" width="536" height="336" viewBox="0 0 536 336">
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#555"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<line x1="128" y1="88" x2="128" y2="208" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="128" y="144" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">DEPENDS_ON</text>
+<line x1="348" y1="88" x2="128" y2="208" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="238" y="144" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">DEPENDS_ON</text>
+<rect x="56" y="64" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="128" y="84" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">src</text>
+<text x="128" y="100" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">Module</text>
+<rect x="276" y="64" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="348" y="84" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">arch</text>
+<text x="348" y="100" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">Module</text>
+<rect x="56" y="184" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="128" y="204" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">include</text>
+<text x="128" y="220" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">Module</text>
+</svg>
+
+      </div>
+      <div class="diagram">
+        <h3>Include Dependency Graph</h3>
+        <svg xmlns="http://www.w3.org/2000/svg" width="976" height="456" viewBox="0 0 976 456">
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#555"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<line x1="568" y1="88" x2="128" y2="88" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="348" y="84" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">DEPENDS_ON</text>
+<line x1="788" y1="88" x2="128" y2="88" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="458" y="84" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">DEPENDS_ON</text>
+<line x1="568" y1="208" x2="788" y2="328" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="678" y="264" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">DEPENDS_ON</text>
+<line x1="568" y1="208" x2="788" y2="328" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="678" y="264" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">DEPENDS_ON</text>
+<line x1="568" y1="208" x2="788" y2="328" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="678" y="264" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">DEPENDS_ON</text>
+<line x1="788" y1="208" x2="788" y2="328" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="788" y="264" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">DEPENDS_ON</text>
+<line x1="348" y1="88" x2="128" y2="208" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="238" y="144" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">INCLUDES</text>
+<line x1="128" y1="328" x2="128" y2="208" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="128" y="264" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">INCLUDES</text>
+<line x1="348" y1="328" x2="128" y2="208" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="238" y="264" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">INCLUDES</text>
+<line x1="568" y1="328" x2="128" y2="208" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="348" y="264" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">INCLUDES</text>
+<line x1="568" y1="328" x2="348" y2="208" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="458" y="264" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">INCLUDES</text>
+<rect x="56" y="64" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="128" y="84" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">include</text>
+<text x="128" y="100" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">Directory</text>
+<rect x="276" y="64" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="348" y="84" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">main.c</text>
+<text x="348" y="100" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">SourceFile</text>
+<rect x="496" y="64" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="568" y="84" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">src</text>
+<text x="568" y="100" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">Directory</text>
+<rect x="716" y="64" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="788" y="84" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">arch/x86</text>
+<text x="788" y="100" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">Directory</text>
+<rect x="56" y="184" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="128" y="204" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">codec.h</text>
+<text x="128" y="220" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">HeaderFile</text>
+<rect x="276" y="184" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="348" y="204" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">stddef.h</text>
+<text x="348" y="220" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">HeaderFile</text>
+<rect x="496" y="184" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="568" y="204" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">src</text>
+<text x="568" y="220" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">Module</text>
+<rect x="716" y="184" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="788" y="204" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">arch</text>
+<text x="788" y="220" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">Module</text>
+<rect x="56" y="304" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="128" y="324" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">simd.c</text>
+<text x="128" y="340" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">SourceFile</text>
+<rect x="276" y="304" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="348" y="324" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">unresolved.c</text>
+<text x="348" y="340" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">SourceFile</text>
+<rect x="496" y="304" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="568" y="324" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">decoder.c</text>
+<text x="568" y="340" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">SourceFile</text>
+<rect x="716" y="304" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="788" y="324" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">include</text>
+<text x="788" y="340" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">Module</text>
+</svg>
+
+      </div>
+      <div class="diagram">
+        <h3>Selected Call-path Diagram</h3>
+        <svg xmlns="http://www.w3.org/2000/svg" width="756" height="336" viewBox="0 0 756 336">
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#555"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<line x1="128" y1="88" x2="128" y2="208" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="128" y="144" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">CALLS</text>
+<line x1="128" y1="88" x2="348" y2="208" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="238" y="144" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">CALLS</text>
+<line x1="128" y1="208" x2="348" y2="88" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="238" y="144" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">CALLS</text>
+<line x1="568" y1="88" x2="568" y2="208" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="568" y="144" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">UNRESOLVED</text>
+<rect x="56" y="64" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="128" y="84" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">main</text>
+<text x="128" y="100" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">Function</text>
+<rect x="276" y="64" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="348" y="84" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">decode_mpeg4_packet</text>
+<text x="348" y="100" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">Function</text>
+<rect x="496" y="64" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="568" y="84" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">probe_external_decoder</text>
+<text x="568" y="100" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">Function</text>
+<rect x="56" y="184" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="128" y="204" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">decode_frame</text>
+<text x="128" y="220" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">Function</text>
+<rect x="276" y="184" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="348" y="204" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">decoder_init</text>
+<text x="348" y="220" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">Function</text>
+<rect x="496" y="184" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="568" y="204" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">external_decoder_probe</text>
+<text x="568" y="220" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">Symbol</text>
+</svg>
+
+      </div>
+      <div class="diagram">
+        <h3>Architecture Slice Diagram</h3>
+        <svg xmlns="http://www.w3.org/2000/svg" width="536" height="216" viewBox="0 0 536 216">
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#555"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<line x1="348" y1="88" x2="128" y2="88" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="238" y="84" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">ARCH_SPECIFIC</text>
+<line x1="348" y1="88" x2="128" y2="88" stroke="#777" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="238" y="84" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">ARCH_SPECIFIC</text>
+<rect x="56" y="64" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="128" y="84" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">x86</text>
+<text x="128" y="100" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">Architecture</text>
+<rect x="276" y="64" width="144" height="48" rx="6" fill="#eef5ff" stroke="#2b5c88"/>
+<text x="348" y="84" text-anchor="middle" font-family="monospace" font-size="10" font-weight="600">simd.c</text>
+<text x="348" y="100" text-anchor="middle" font-family="monospace" font-size="9" fill="#555">SourceFile</text>
+</svg>
+
+      </div>
+    </section>
+    <section>
+      <h2>Module Dependencies</h2>
+      <table><thead><tr><th>Source module</th><th>Target module</th><th>Confidence</th><th>Source file</th><th>Target file</th></tr></thead><tbody><tr><td>arch</td><td>include</td><td>LIKELY</td><td>arch/x86/simd.c</td><td>include/codec.h</td></tr><tr><td>src</td><td>include</td><td>LIKELY</td><td>src/decoder.c</td><td>include/codec.h</td></tr><tr><td>src</td><td>include</td><td>LIKELY</td><td>src/main.c</td><td>include/codec.h</td></tr><tr><td>src</td><td>include</td><td>LIKELY</td><td>src/unresolved.c</td><td>include/codec.h</td></tr></tbody></table>
+    </section>
+    <section>
+      <h2>Files</h2>
+      <table><thead><tr><th>Path</th><th>Type</th><th>Language</th><th>Generated candidate</th></tr></thead><tbody><tr><td>&lt;stddef.h&gt;</td><td>HeaderFile</td><td></td><td>False</td></tr><tr><td>README.md</td><td>File</td><td>markdown</td><td>False</td></tr><tr><td>arch/x86/simd.c</td><td>SourceFile</td><td>c</td><td>False</td></tr><tr><td>compile_commands.json</td><td>File</td><td>unknown</td><td>False</td></tr><tr><td>include/codec.h</td><td>HeaderFile</td><td>c-header</td><td>False</td></tr><tr><td>src/decoder.c</td><td>SourceFile</td><td>c</td><td>False</td></tr><tr><td>src/main.c</td><td>SourceFile</td><td>c</td><td>False</td></tr><tr><td>src/unresolved.c</td><td>SourceFile</td><td>c</td><td>False</td></tr></tbody></table>
+    </section>
+    <section>
+      <h2>Symbol Browser</h2>
+      <table><thead><tr><th>Name</th><th>Type</th><th>File</th><th>Line</th><th>Role</th></tr></thead><tbody><tr><td>x86_idct</td><td>Function</td><td>arch/x86/simd.c</td><td>4</td><td>definition</td></tr><tr><td>TINY_CODEC_H</td><td>Macro</td><td>include/codec.h</td><td>2</td><td>definition</td></tr><tr><td>CODEC_OK</td><td>Macro</td><td>include/codec.h</td><td>4</td><td>definition</td></tr><tr><td>Decoder</td><td>Struct</td><td>include/codec.h</td><td>6</td><td>definition</td></tr><tr><td>decoder_init</td><td>Function</td><td>include/codec.h</td><td>10</td><td>declaration</td></tr><tr><td>decode_mpeg4_packet</td><td>Function</td><td>include/codec.h</td><td>11</td><td>declaration</td></tr><tr><td>decode_frame</td><td>Function</td><td>include/codec.h</td><td>12</td><td>declaration</td></tr><tr><td>decoder_init</td><td>Function</td><td>src/decoder.c</td><td>4</td><td>definition</td></tr><tr><td>decode_mpeg4_packet</td><td>Function</td><td>src/decoder.c</td><td>11</td><td>definition</td></tr><tr><td>decode_frame</td><td>Function</td><td>src/decoder.c</td><td>19</td><td>definition</td></tr><tr><td>main</td><td>Function</td><td>src/main.c</td><td>3</td><td>definition</td></tr><tr><td>probe_external_decoder</td><td>Function</td><td>src/unresolved.c</td><td>3</td><td>definition</td></tr></tbody></table>
+    </section>
+    <section>
+      <h2>Include Dependencies</h2>
+      <table><thead><tr><th>Source</th><th>Target</th><th>Confidence</th><th>Extraction tool</th></tr></thead><tbody><tr><td>arch/x86/simd.c</td><td>include/codec.h</td><td>CONFIRMED</td><td>include-regex</td></tr><tr><td>src/decoder.c</td><td>&lt;stddef.h&gt;</td><td>POSSIBLE</td><td>include-regex</td></tr><tr><td>src/decoder.c</td><td>include/codec.h</td><td>CONFIRMED</td><td>include-regex</td></tr><tr><td>src/main.c</td><td>include/codec.h</td><td>CONFIRMED</td><td>include-regex</td></tr><tr><td>src/unresolved.c</td><td>include/codec.h</td><td>CONFIRMED</td><td>include-regex</td></tr></tbody></table>
+    </section>
+    <section>
+      <h2>Selected Call Paths</h2>
+      <table><thead><tr><th>Caller</th><th>Callee</th><th>Edge</th><th>Confidence</th><th>Extraction tool</th><th>File</th><th>Line</th></tr></thead><tbody><tr><td>decode_frame</td><td>decode_mpeg4_packet</td><td>CALLS</td><td>CONFIRMED</td><td>callgraph-regex</td><td>src/decoder.c</td><td>20</td></tr><tr><td>main</td><td>decode_frame</td><td>CALLS</td><td>CONFIRMED</td><td>callgraph-regex</td><td>src/main.c</td><td>7</td></tr><tr><td>main</td><td>decoder_init</td><td>CALLS</td><td>CONFIRMED</td><td>callgraph-regex</td><td>src/main.c</td><td>6</td></tr><tr><td>probe_external_decoder</td><td>external_decoder_probe</td><td>UNRESOLVED</td><td>UNRESOLVED</td><td>callgraph-regex</td><td>src/unresolved.c</td><td>4</td></tr></tbody></table>
+    </section>
+    <section>
+      <h2>MPEG-4 Case Study</h2>
+      <h3>Implementation Candidates</h3>
+      <table><thead><tr><th>Symbol</th><th>Type</th><th>File</th><th>Line</th><th>Role</th><th>Match basis</th></tr></thead><tbody><tr><td>decode_mpeg4_packet</td><td>Function</td><td>src/decoder.c</td><td>11</td><td>definition</td><td>symbol-name, decode-name, decode-path, callable-symbol</td></tr><tr><td>decode_mpeg4_packet</td><td>Function</td><td>include/codec.h</td><td>11</td><td>declaration</td><td>symbol-name, decode-name, callable-symbol</td></tr></tbody></table>
+      <h3>Matching Files</h3>
+      <table><thead><tr><th>File</th><th>Evidence</th></tr></thead><tbody><tr><td>include/codec.h</td><td>symbol:decode_mpeg4_packet</td></tr><tr><td>src/decoder.c</td><td>symbol:decode_mpeg4_packet</td></tr></tbody></table>
+      <h3>Public API Candidates</h3>
+      <table><thead><tr><th>Symbol</th><th>Type</th><th>File</th><th>Line</th></tr></thead><tbody><tr><td>decode_mpeg4_packet</td><td>PublicAPI</td><td>include/codec.h</td><td>11</td></tr></tbody></table>
+      <h3>Direct Callers</h3>
+      <table><thead><tr><th>Caller</th><th>Target</th><th>Confidence</th><th>Extraction tool</th><th>File</th><th>Line</th></tr></thead><tbody><tr><td>decode_frame</td><td>decode_mpeg4_packet</td><td>CONFIRMED</td><td>callgraph-regex</td><td>src/decoder.c</td><td>20</td></tr></tbody></table>
+      <h3>Possible Static Paths</h3>
+      <table><thead><tr><th>Target</th><th>Path</th></tr></thead><tbody><tr><td>decode_mpeg4_packet</td><td>main -&gt; decode_frame -&gt; decode_mpeg4_packet</td></tr></tbody></table>
+    </section>
+    <section>
+      <h2>Architecture-specific Files</h2>
+      <table><thead><tr><th>File</th><th>Architecture</th><th>Confidence</th><th>Reason</th></tr></thead><tbody><tr><td>arch/x86/simd.c</td><td>x86</td><td>LIKELY</td><td>path component x86</td></tr><tr><td>arch/x86/simd.c</td><td>x86</td><td>CONFIRMED</td><td>architecture macro __x86_64__</td></tr></tbody></table>
+    </section>
+    <section>
+      <h2>Build Context</h2>
+      <table><thead><tr><th>Translation unit</th><th>Include paths</th><th>Macros</th><th>Target architecture</th></tr></thead><tbody><tr><td>src/decoder.c</td><td>include</td><td>DEBUG=1</td><td>x86_64-linux-gnu</td></tr><tr><td>src/main.c</td><td>include</td><td>DEBUG=1</td><td>x86_64-linux-gnu</td></tr></tbody></table>
+    </section>
+    <section>
+      <h2>Evidence-bound Summary</h2>
+      <pre>Answer
+tiny-c contains 7 file(s), 15 symbol(s), 3 top-level module(s), 5 include edge(s) and 4 call edge(s) in the canonical graph.
+
+Module responsibilities
+- arch: 1 file(s), 1 outgoing include(s), representative symbols: x86_idct
+- include: 1 file(s), 0 outgoing include(s), representative symbols: decoder_init, decode_mpeg4_packet, decode_frame, TINY_CODEC_H, CODEC_OK
+- src: 3 file(s), 4 outgoing include(s), representative symbols: decoder_init, decode_mpeg4_packet, decode_frame, main, probe_external_decoder
+
+Important files
+- include/codec.h (HeaderFile, symbols=9, degree=12)
+- src/decoder.c (SourceFile, symbols=3, degree=8)
+- arch/x86/simd.c (SourceFile, symbols=1, degree=6)
+- src/main.c (SourceFile, symbols=1, degree=5)
+- src/unresolved.c (SourceFile, symbols=1, degree=4)
+
+Important symbols
+- decoder_init [PublicAPI] include/codec.h:10
+- decode_mpeg4_packet [PublicAPI] include/codec.h:11
+- decode_frame [PublicAPI] include/codec.h:12
+- decode_frame [Function] src/decoder.c:19
+- main [Function] src/main.c:3
+- decoder_init [Function] include/codec.h:10
+- decode_mpeg4_packet [Function] include/codec.h:11
+- decode_frame [Function] include/codec.h:12
+- decoder_init [Function] src/decoder.c:4
+- decode_mpeg4_packet [Function] src/decoder.c:11
+- probe_external_decoder [Function] src/unresolved.c:3
+- x86_idct [Function] arch/x86/simd.c:4
+
+Dependency summary
+- arch -&gt; include [DEPENDS_ON LIKELY] (arch/x86/simd.c:1)
+- arch/x86/simd.c -&gt; include/codec.h [INCLUDES CONFIRMED] (arch/x86/simd.c:1)
+- src -&gt; include [DEPENDS_ON LIKELY] (src/decoder.c:1)
+- src/decoder.c -&gt; &lt;stddef.h&gt; [INCLUDES POSSIBLE] (src/decoder.c:2)
+- src/decoder.c -&gt; include/codec.h [INCLUDES CONFIRMED] (src/decoder.c:1)
+- src/main.c -&gt; include/codec.h [INCLUDES CONFIRMED] (src/main.c:1)
+- src/unresolved.c -&gt; include/codec.h [INCLUDES CONFIRMED] (src/unresolved.c:1)
+
+Documentation signals
+- README.md:3 [Tiny C Codec]: Tiny C Codec is a small validation corpus for Code Expositor.
+- README.md:7 [Decoder Flow]: The public frame decoder calls the MPEG-4 packet decoder through a direct C function call.
+- README.md:11 [Architecture Notes]: The `arch/x86` directory contains x86-specific code guarded by architecture macros.
+
+Uncertainty
+- confidence: LIKELY edge count: 18
+- confidence: POSSIBLE edge count: 1
+- confidence: UNRESOLVED edge count: 1
+- static_analysis: Possible or unresolved edges must not be treated as runtime execution proof.
+
+Evidence
+- arch/x86/simd.c:1: arch -&gt; include [DEPENDS_ON LIKELY via include-regex]
+- arch/x86/simd.c:1: simd.c -&gt; codec.h [INCLUDES CONFIRMED via include-regex]
+- src/main.c:1: main.c -&gt; codec.h [INCLUDES CONFIRMED via include-regex]
+- src/decoder.c:2: decoder.c -&gt; stddef.h [INCLUDES POSSIBLE via include-regex]
+- include/codec.h:11: decode_mpeg4_packet -&gt; decode_mpeg4_packet [EXPORTED_BY LIKELY via symbol-index]
+- include/codec.h:12: decode_frame -&gt; decode_frame [EXPORTED_BY LIKELY via symbol-index]
+- arch/x86/simd.c:3: simd.c -&gt; x86 [ARCH_SPECIFIC CONFIRMED via architecture-classifier]
+- arch/x86/simd.c:4: simd.c -&gt; x86_idct [DEFINES CONFIRMED via outline-regex]
+- include/codec.h:4: codec.h -&gt; CODEC_OK [DEFINES CONFIRMED via outline-regex]
+- src/main.c:3: main.c -&gt; main [DEFINES CONFIRMED via outline-regex]
+- src/main.c:7: main -&gt; decode_frame [CALLS CONFIRMED via callgraph-regex]
+- src/unresolved.c:1: src -&gt; include [DEPENDS_ON LIKELY via include-regex]
+
+Suggested next query
+- symbols_in(&lt;module-or-file&gt;)</pre>
+    </section>
+  </main>
+</body>
+</html>
