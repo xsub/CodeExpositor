@@ -21,9 +21,25 @@ AI is an explanation layer over extracted evidence. It is not the source of trut
   "nodes": [],
   "edges": [],
   "evidence": [],
+  "file_locations": [],
+  "symbol_locations": [],
   "confidence": [],
   "limitations": []
 }
+```
+
+`file_locations` and `symbol_locations` are derived only from selected graph nodes and evidence records. They are included so the LLM can cite files and symbols without scanning raw repository text.
+
+The repository-level contract payload is available from the CLI:
+
+```bash
+expositor explain repository /path/to/repo --format payload
+expositor explain module /path/to/repo --value libavcodec --format payload
+expositor explain file /path/to/repo --value libavcodec/mpeg4videodec.c --format payload
+expositor explain function /path/to/repo --value decode_frame --format payload
+expositor explain path /path/to/repo --value decode_frame --format payload
+expositor explain architecture /path/to/repo --value x86 --format payload
+expositor explain where /path/to/repo --value decode_frame --format payload
 ```
 
 ## Output Format
@@ -31,6 +47,7 @@ AI is an explanation layer over extracted evidence. It is not the source of trut
 ```text
 Answer
 Evidence
+Confidence
 Uncertainty
 Relevant files
 Relevant functions

@@ -137,3 +137,89 @@ expositor report /path/to/repo --html
 ```
 
 Report sections: repository overview, module map, dependency graph, symbol browser, selected call paths, architecture-specific files and AI summaries with evidence.
+
+
+## Early Visualization Strategy
+
+Visualization should appear as early as possible, but not as a GUI-first effort.
+
+The primary objective is to validate the correctness of the extracted graph and the usefulness of the generated explanations before investing in desktop or web interfaces.
+
+The first visualization layer should be generated directly from the canonical graph and query engine.
+
+Initial visualization outputs:
+
+- Graphviz DOT export
+- SVG generation
+- static HTML reports
+- module dependency diagrams
+- include dependency graphs
+- selected call-path diagrams
+- architecture-specific slices
+
+Example commands:
+
+```bash
+expositor export dot --graph includes
+expositor export svg --graph includes
+expositor report --html
+expositor callers function_name
+expositor paths-to function_name --format svg
+```
+
+This allows immediate validation of graph extraction without introducing GUI complexity.
+
+## Desktop UI Strategy
+
+PyQt5 is intentionally **not** part of the initial MVP.
+
+The desktop application should only be introduced after the core engine becomes stable.
+
+Required prerequisites:
+
+- canonical graph schema
+- repository intake
+- outline index
+- semantic index
+- SQLite graph store
+- query engine
+- Graphviz/DOT export
+- HTML report generation
+- evidence-bound explanation pipeline
+
+At this stage PyQt5 becomes a frontend only.
+
+The desktop application must never own graph extraction, indexing or analysis logic.
+
+Its responsibilities should be limited to:
+
+- repository browser
+- graph explorer
+- function viewer
+- query execution
+- SVG viewer
+- AI explanation panel
+
+All graph extraction, indexing and analysis must remain inside the Expositor core libraries.
+
+## Recommended UI Evolution
+
+```text
+CLI
+    ↓
+Graphviz / SVG
+    ↓
+Static HTML reports
+    ↓
+Interactive browser visualization (Cytoscape.js)
+    ↓
+PyQt5 desktop application
+    ↓
+Optional IDE extensions
+```
+
+**Guiding principle**
+
+The visualization layer is replaceable.
+
+The graph engine is not.

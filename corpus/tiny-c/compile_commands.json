@@ -1,0 +1,12 @@
+[
+  {
+    "directory": ".",
+    "file": "src/main.c",
+    "arguments": ["cc", "-Iinclude", "-DDEBUG=1", "--target=x86_64-linux-gnu", "-c", "src/main.c"]
+  },
+  {
+    "directory": ".",
+    "file": "src/decoder.c",
+    "arguments": ["cc", "-Iinclude", "-DDEBUG=1", "--target=x86_64-linux-gnu", "-c", "src/decoder.c"]
+  }
+]

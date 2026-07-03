@@ -2,6 +2,16 @@
 
 The project owns its graph model. External tools feed this model through adapters. No external tool may define the internal schema.
 
+## Executable Schema
+
+The canonical schema is available directly from Expositor Core:
+
+```bash
+expositor schema
+```
+
+This emits the graph index version, node types, edge types, confidence labels, dataclass fields and the evidence contract used by adapters, storage, validation, query clients and reports.
+
 ## Node Types
 
 - Repository
@@ -40,6 +50,7 @@ The project owns its graph model. External tools feed this model through adapter
 - DEPENDS_ON
 - CALLS
 - MAY_CALL
+- UNRESOLVED
 - ASSIGNS_FUNCTION_POINTER
 - USES_CALLBACK
 - REGISTERED_AS

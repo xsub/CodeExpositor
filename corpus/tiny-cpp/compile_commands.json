@@ -1,0 +1,13 @@
+[
+  {
+    "directory": ".",
+    "arguments": [
+      "c++",
+      "-std=c++17",
+      "-Iinclude",
+      "-c",
+      "src/player.cpp"
+    ],
+    "file": "src/player.cpp"
+  }
+]
